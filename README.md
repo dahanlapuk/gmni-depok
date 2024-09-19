@@ -41,7 +41,7 @@ Website akan dapat diakses melalui <code>http://localhost:3000</code>.
 <li>Kirim pull request untuk review.</li>
 </ol>
 <h2>Dukungan</h2>
-<p>Jika Anda mengalami masalah atau memiliki pertanyaan, silakan buka <a href="https://github.com/username/gmni-depok/issues">issue</a> di GitHub atau hubungi tim pengembang kami di <a href="mailto:email@example.com">email@example.com</a>.</p>
+<p>Jika Anda mengalami masalah atau memiliki pertanyaan, silakan buka <a href="https://github.com/username/gmni-depok/issues">issue</a> di GitHub atau hubungi tim pengembang kami di <a href="mailto:itbamuhammad.dev@gmail.com">email@example.com</a>.</p>
 <h2>Lisensi</h2>
 <p>Proyek ini dilisensikan di bawah <a href="LICENSE">MIT License</a>.</p>
     <hr>
