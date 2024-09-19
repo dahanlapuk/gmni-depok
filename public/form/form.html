@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GMNI Depok - Form</title>
+    <link rel="shortcut icon" href="/public/images/cabang.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
+        rel="stylesheet">
+    <script src="https://unpkg.com/feather-icons"></script>
+    <link rel="stylesheet" href="/public/form/form.css">
+    <link rel="stylesheet" href="/public/assets/navbar/navbar.css">
+    <link rel="stylesheet" href="/public/assets/footer/footer.css">
+</head>
+
+<body>
+    <!-- Navbar Done -->
+    <header class="navbar">
+        <div class="navbar-left">
+            <img src="/public/images/cabang.png" alt="GMNI Depok Logo" class="gmni-logo">
+            <div class="navbar-text">
+                <h1 class="navbar-title">Gerakan Mahasiswa Nasional Indonesia</h1>
+                <p class="navbar-subtitle">Dewan Pimpinan Cabang Kota Depok</p>
+            </div>
+        </div>
+        
+        <!-- Hamburger menu -->
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <!-- Navbar links -->
+        <nav class="navbar-right" id="navbarLinks">
+            <a href="/public/index.html">Home</a>
+            <a href="/public/article/article.html">Artikel</a>
+            <a href="/public/form/form.html">Daftar</a> <!-- Tambahan menu "Daftar" -->
+        </nav>
+    </header>
+
+
+    <!-- Form Title and Subtitle -->
+    <section class="form-header">
+        <h1>Formulir Pendaftaran <br> <span>Pekan Penerimaan Anggota Baru</span></h1>
+        <p>Dewan Pimpinan Komisariat <br> <span>Fakultas Ilmu Sosial dan Ilmu Politik Universitas Indonesia</span> </p>
+    </section>
+
+    <!-- Form Section -->
+    <section class="form-container">
+        <!-- Section 1: Welcome -->
+        <div class="form-section active" id="section-1">
+            <h2 class="form-title">Selamat Datang di PPAB GMNI</h2>
+            <p>Selamat datang peserta PPAB. Silakan melanjutkan ke form untuk mengisi informasi pendaftaran.</p>
+            <button type="button" class="next-btn" data-next="section-2">Mulai Isi Formulir</button>
+        </div>
+
+        <!-- Section 2: Personal Info -->
+        <div class="form-section" id="section-2">
+            <h2 class="form-title">Step 2: Data Pribadi</h2>
+            <form id="form-step-2">
+                <label for="name">Nama
+                    <input type="text" id="name" required>
+                </label>
+                <label for="email">Email
+                    <input type="email" id="email" required>
+                </label>
+                <label for="telephone">No Telepon (Whatsapp)
+                    <input type="number" id="telephone" required>
+                </label>
+                <button type="button" class="prev-btn" data-prev="section-1">Previous</button>
+                <button type="button" class="next-btn" data-next="section-3">Next</button>
+            </form>
+        </div>
+
+        <!-- Section 3: University and Faculty -->
+        <div class="form-section" id="section-3">
+            <h2 class="form-title">Step 3: Asal Universitas dan Fakultas</h2>
+            <form id="form-step-3">
+                <label for="university">Asal Universitas
+                    <select id="university" required>
+                        <option value="">Pilih Universitas</option>
+                        <option value="Universitas Indonesia">Universitas Indonesia</option>
+                        <option value="Jakarta Global University">Jakarta Global University</option>
+                        <option value="Universitas Gunadarma">Universitas Gunadarma</option>
+                        <option value="other">Other</option>
+                    </select>
+                </label>
+                <label for="other-university" id="other-university-label" class="hidden">
+                    Masukkan Universitas
+                    <input type="text" id="other-university">
+                </label>
+
+                <label for="faculty">Asal Fakultas
+                    <select id="faculty" required>
+                        <option value="">Pilih Fakultas</option>
+                        <option value="Fakultas Ilmu Budaya">Fakultas Ilmu Budaya</option>
+                        <option value="Fakultas Hukum">Fakultas Hukum</option>
+                        <option value="Fakultas Ilmu Sosial dan Politik">Fakultas Ilmu Sosial dan Politik</option>
+                        <option value="Fakultas Ilmu Administrasi">Fakultas Ilmu Administrasi</option>
+                        <option value="other">Other</option>
+                    </select>
+                </label>
+                <label for="other-faculty" id="other-faculty-label" class="hidden">
+                    Masukkan Fakultas
+                    <input type="text" id="other-faculty">
+                </label>
+
+                <button type="button" class="prev-btn" data-prev="section-2">Previous</button>
+                <button type="button" class="next-btn" data-next="section-4">Next</button>
+            </form>
+        </div>
+
+        <!-- Section 4: Reason for Joining -->
+        <div class="form-section" id="section-4">
+            <h2 class="form-title">Step 4: Alasan Masuk GMNI</h2>
+            <form id="form-step-4">
+                <label for="reason">Alasan Masuk GMNI
+                    <textarea id="reason" required></textarea>
+                </label>
+                <button type="button" class="prev-btn" data-prev="section-3">Previous</button>
+                <button type="button" class="next-btn" data-next="section-5">Next</button>
+            </form>
+        </div>
+
+        <!-- Section 5: Terms and Conditions -->
+        <div class="form-section" id="section-5">
+            <h2 class="form-title">Step 5: Syarat dan Ketentuan</h2>
+            <p>Dengan melanjutkan, Anda menyetujui <a href="/public/terms.html" target="_blank">syarat dan ketentuan</a> GMNI.</p>
+            <button type="button" class="prev-btn" data-prev="section-4">Previous</button>
+            <button type="button" class="next-btn" data-next="section-recap">Next</button>
+        </div>
+
+        <!-- Section 6: Recap and Submit -->
+        <div class="form-section" id="section-recap">
+            <h2 class="form-title">Step 6: Review and Confirm</h2>
+            <div id="recap-content"></div>
+            <button type="button" class="prev-btn" data-prev="section-5">Previous</button>
+            <button type="submit" class="submit-btn">Submit</button>
+        </div>
+
+        <!-- Final Section: Thank You -->
+        <div class="form-section" id="section-thankyou">
+            <h2 class="form-title">Terima Kasih</h2>
+            <p>Terima kasih sudah mendaftar. Silakan bergabung di grup WhatsApp kami untuk informasi lebih lanjut.</p>
+            <button class="join-wa-btn">Join Grup WhatsApp</button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-left">
+            <img src="/public/images/cabang.png" alt="GMNI Logo" class="footer-logo">
+            <div class="footer-text">
+                <p>Dewan Pimpinan Komisariat</p>
+                <h3>Gerakan Mahasiswa Nasional Indonesia</h3>
+                <p>Kota Depok</p>
+            </div>
+        </div>
+        <div class="footer-right">
+            <a href="https://www.instagram.com/dpcgmnidepok/?hl=id" target="_blank"><i data-feather="instagram"></i></a>
+            <a href="#"><i data-feather="linkedin"></i></a>
+            <a href="#"><i data-feather="phone"></i></a>
+        </div>
+    </footer>
+
+    <script src="form.js"></script>
+    <script src="/public/assets/navbar/navbar.js"></script>
+    <script>
+        // Feather Icons
+        feather.replace();
+    </script>
+</body>
+
+</html>

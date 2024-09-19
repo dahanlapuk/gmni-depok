@@ -1,0 +1,22 @@
+Data Fakultas=
+Fakultas Hukum (FH)
+Fakultas Ilmu Budaya (FIB)
+Fakultas Ilmu Sosial dan Ilmu Politik (FISIP)
+Fakultas Ilmu Administrasi (FIA)
+Fakultas Ekonomi dan Bisnis (FEB)
+Fakultas Psikologi (FPsi)
+Fakultas Teknik (FT)
+Fakultas Matematika dan Ilmu Alam (FMIPA)
+Fakultas Ilmu Komputer (Fasilkom)
+Fakultas Ilmu Keperawatan (FIK)
+Fakultas Kedokteran (FK)
+Fakultas Kedokteran Gigi (FKG)
+Fakultas Kesehatan Masyarakat (FKM)
+Fakultas Farmasi (FF)
+Sekolah Vokasi
+
+Data Universitas = 
+Universitas Indonesia
+Gunadarma University
+Jakarta Global University
+
