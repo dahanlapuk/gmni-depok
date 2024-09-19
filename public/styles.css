@@ -1,0 +1,375 @@
+:root {
+    --primary-color: #C82333;
+    --secondary-color: #353A40;
+    --third-color: #F0F1F1;
+    --strong-white: #FFFFFF;
+    --strong-black: #000000;
+}
+
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+body {
+    background-color: var(--third-color);
+    color: var(--strong-black);
+    overflow-x: hidden;
+    /* Menghindari scroll horizontal */
+}
+
+/* Navbar */
+/* Sudah diatur di module /public/assets/navbar/navbar.css */
+
+/* Section Pertama - Hero */
+.hero-section {
+    background: linear-gradient(to bottom, var(--primary-color), var(--strong-black));
+    /* Gradasi merah ke hitam */
+    color: var(--strong-white);
+    /* Warna tulisan putih */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 150px 0;
+    min-height: 80vh;
+}
+
+.hero-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    max-width: 1200px;
+}
+
+.hero-text {
+    max-width: 60%;
+    text-align: left;
+}
+
+.hero-text h1 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+.hero-text h2 {
+    font-size: 2rem;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+.hero-text p {
+    font-size: 1.5rem;
+    line-height: 1.5;
+    font-weight: 300;
+}
+
+.hero-logo img {
+    width: 20rem;
+    border-radius: 50%;
+}
+
+/* Section Kedua - Tentang Kami */
+.tentang-section {
+    background: var(--strong-black);
+    color: var(--strong-white);
+    padding: 1rem 5rem 5rem 5rem;
+}
+
+.tentang-section h2 {
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 50px;
+    color: var(--strong-white);
+}
+
+.subsection {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.subsection:nth-child(even) {
+    flex-direction: row-reverse;
+    /* Membalik subsection untuk sejarah */
+}
+
+
+.subsection .text {
+    max-width: 60%;
+}
+
+.subsection h3 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: var(--strong-white);
+}
+
+.subsection p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+/* komisariat section  */
+.komisariat-section {
+    text-align: center;
+    padding: 50px 0;
+    background: linear-gradient(to bottom, #000000, #C82333);
+}
+
+.komisariat-header h2 {
+    font-size: 3rem;
+    color: var(--strong-white);
+    margin-bottom: 30px;
+}
+
+.komisariat-stats {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.stat {
+    margin: 0 50px;
+}
+
+.stat h1 {
+    padding-top: 3rem;
+    font-size: 5rem;
+    color: var(--strong-white);
+}
+
+.stat p {
+    font-size: 2rem;
+    color: var(--strong-white);
+    padding-bottom: 4rem;
+}
+
+.komisariat-logos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo-row {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.single-logo {
+    margin-top: 7rem;
+    /* Beri jarak untuk logo yang paling bawah */
+}
+
+.logo-item {
+    text-align: center;
+    margin: 0 30px;
+}
+
+.logo-item img {
+    width: 17rem;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.logo-item p {
+    font-weight: 800;
+    font-size: 1rem;
+    color: var(--strong-white);
+    margin-top: 10px;
+}
+
+/* Logo tengah lebih ke bawah */
+.lower-logo {
+    transform: translateY(7rem);
+    /* Posisikan logo tengah lebih rendah */
+}
+
+
+/* Gallery Section */
+.galeri-section {
+    padding: 60px;
+    background: linear-gradient(to bottom, var(--primary-color), gray);
+    color: var(--strong-white);
+    text-align: center;
+    padding-bottom: 10rem;
+}
+
+.galeri-section h2 {
+    font-size: 3rem;
+    margin-bottom: 50px;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* Menampilkan 3 gambar dalam satu baris */
+    gap: 20px;
+}
+
+.box {
+    position: relative;
+    width: 100%;
+    height: 250px;
+    /* Fixed height to control box size */
+    background-size: cover;
+    background-position: center;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.box:hover {
+    transform: scale(1.05);
+}
+
+.box::after {
+    content: attr(data-title);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.5);
+    /* Background transparan */
+    color: var(--strong-white);
+    padding: 10px;
+    font-size: 1.2rem;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.box:hover::after {
+    opacity: 1;
+}
+
+/* Kontak Kami Section */
+.kontak-section {
+    background: linear-gradient(to bottom, gray, rgb(48, 46, 46));
+    /* Warna gelap */
+    color: var(--strong-white);
+    padding: 50px 5rem;
+    text-align: center;
+}
+
+.kontak-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: var(--strong-white);
+    letter-spacing: 1px;
+}
+
+.kontak-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+    align-items: flex-start;
+}
+
+/* Kontak Form Styling */
+.kontak-form {
+    flex: 1;
+    background-color: #3E4347;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.kontak-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.kontak-form label {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    display: block;
+    color: var(--strong-white);
+}
+
+.kontak-form input,
+.kontak-form textarea {
+    width: 100%;
+    padding: 12px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 1rem;
+    background-color: #F0F1F1;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.kontak-form input:focus,
+.kontak-form textarea:focus {
+    border-color: var(--primary-color);
+}
+
+.kontak-form textarea {
+    resize: none;
+}
+
+.submit-btn {
+    background-color: var(--primary-color);
+    color: var(--strong-white);
+    border: none;
+    border-radius: 5px;
+    padding: 15px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 10px;
+}
+
+.submit-btn:hover {
+    background-color: #a71d2a;
+}
+
+/* Map Styling */
+.kontak-info {
+    flex: 0.9;
+}
+
+.map-placeholder {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.map-frame {
+    width: 100%;
+    height: 100%;
+    min-height: 400px;
+    border: 0;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+
+@media (max-width: 768px) {
+    .kontak-container {
+        flex-direction: column;
+    }
+
+    .map-placeholder,
+    .kontak-form {
+        width: 100%;
+    }
+
+    .gallery {
+        grid-template-columns: 1fr;
+        /* Pada perangkat kecil, gambar tampil satu kolom */
+    }
+}

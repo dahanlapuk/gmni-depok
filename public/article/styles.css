@@ -1,0 +1,199 @@
+:root {
+    --primary-color: #C82333;
+    --secondary-color: #353A40;
+    --third-color: #F0F1F1;
+    --strong-white: #FFFFFF;
+    --strong-black: #000000;
+}
+
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+body {
+    background-color: var(--third-color);
+    color: var(--strong-black);
+    overflow-x: hidden;
+    /* Menghindari scroll horizontal */
+}
+
+/* Navbar */
+/* /public/assets/navbar/navbar.css */
+
+/* Hero Section */
+.hero {
+    background-color: var(--primary-color);
+    color: var(--strong-white);
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.hero h1 {
+    margin-bottom: 0.5rem;
+    font-size: 3rem;
+}
+
+.hero h2{
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+.hero p {
+    margin-bottom: 1rem;
+    font-size: 120%;
+}
+
+.join-btn {
+    background-color: var(--strong-black);
+    color: var(--strong-white);
+    padding: 0.8rem 7rem;
+    border-radius: 7px;
+    border: none;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.join-btn:hover {
+    background-color: var(--secondary-color);
+}
+
+.explore-text {
+    margin-top: 3rem;
+}
+
+/* Article Highlight Section */
+.article-highlight {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px;
+    background-color: var(--strong-white);
+    margin-top: -20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.article-main {
+    width: 60%;
+}
+
+.article-main h3 {
+    color: var(--primary-color);
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.article-main p {
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
+}
+
+.read-article-btn {
+    background-color: var(--primary-color);
+    color: var(--strong-white);
+    padding: 0.8rem 2rem;
+    border-radius: 7px;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.read-article-btn:hover {
+    background-color: var(--secondary-color);
+}
+
+.article-image {
+    width: 35%;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 10px;
+    
+}
+
+.article-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Updated Articles Section */
+.articles {
+    padding: 50px 100px; /* Adjust padding for space around the section */
+    background-color: var(--strong-white); /* White background to match the image */
+}
+
+.articles-header {
+    text-align: left; /* Align text to the left */
+    margin-bottom: 30px; /* Space between heading and cards */
+}
+
+.articles-subtitle {
+    color: #888; /* Light grey color for subtitle */
+    font-size: 1rem; /* Smaller font size for subtitle */
+    margin-bottom: 5px; /* Space between subtitle and title */
+}
+
+.articles-title {
+    color: var(--strong-black); /* Black color for title */
+    font-size: 2rem; /* Larger font size for the title */
+    font-weight: bold;
+    margin: 0; /* Remove default margin */
+}
+
+.article-cards {
+    display: flex;
+    justify-content: space-between; /* Space between each card */
+    gap: 30px; /* Adjust the space between cards */
+    align-items: flex-start;
+}
+
+.article-card {
+    width: 32rem; /* Set a fixed width to control card size */
+    background-color: var(--third-color); /* Light grey background */
+    border-radius: 10px; /* Rounded corners for the cards */
+    overflow: hidden;
+    text-decoration: none; /* Remove underline for links */
+    color: var(--strong-black); /* Text color */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transform effect */
+    cursor: pointer; /* Indicate clickable area */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.article-card:hover {
+    transform: scale(1.05); /* Slightly enlarge card on hover */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); /* Elevate shadow on hover */
+}
+
+.article-image {
+    width: 100%;
+    height: 200px; /* Adjust height to match the image */
+    overflow: hidden; /* Hide overflow for border radius */
+    background-color: #ddd; /* Fallback color */
+}
+
+.article-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Maintain aspect ratio */
+    border-radius: 10px 10px 0 0; /* Rounded top corners */
+}
+
+.article-card p {
+    margin: 15px;
+    color: var(--strong-black); /* Black text */
+    font-size: 1rem; /* Adjust font size */
+    font-weight: bold;
+    text-align: center; /* Center text inside card */
+}
+
+.article-placeholder {
+    width: 100%;
+    height: 200px; /* Adjust height to match the image */
+    background-color: #ddd; /* Placeholder color */
+    border-radius: 10px 10px 0 0; /* Rounded top corners */
+}
+
+/* Footer in module assets */

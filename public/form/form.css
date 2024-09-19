@@ -1,0 +1,317 @@
+:root {
+    --primary-color: #C82333;
+    --secondary-color: #353A40;
+    --third-color: #F0F1F1;
+    --strong-white: #FFFFFF;
+    --strong-black: #000000;
+}
+
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    background-color: var(--third-color);
+    color: var(--strong-black);
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    line-height: 1.6;
+}
+
+/* Navbar */
+/* Sudah diatur di /public/assets/navbar/navbar.css */
+
+/* Form Styles */
+.form-container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: var(--strong-white);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-header h1 {
+    font-size: 2.1rem;
+    margin-bottom: 2px;
+    color: var(--primary-color);
+    text-align: center;
+    font-weight: 700;
+    line-height: 2.6rem;
+    padding-top: 2.9rem;
+    padding-bottom: 1.12rem;
+}
+
+.form-header h1 span {
+    font-size: 2.2rem;
+    font-weight: 900;
+}
+
+.form-header p {
+    font-size: 1.3rem;
+    margin-top: 5px;
+    color: var(--secondary-color);
+    text-align: center;
+    font-weight: 600;
+    line-height: 1.99rem;
+}
+
+.form-header p span {
+    border-top: solid 2px;
+    font-size: 1.4rem;
+    font-weight: 800;
+}
+
+.form-title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: var(--primary-color);
+    text-align: center;
+    font-weight: 700;
+}
+
+label {
+    display: block;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-top: 5px;
+    font-size: 1rem;
+}
+
+textarea {
+    resize: none;
+    height: 100px;
+}
+
+button {
+    padding: 12px 20px;
+    background-color: var(--primary-color);
+    color: var(--strong-white);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #a71b25;
+    transform: scale(1.05);
+}
+
+.next-btn,
+.prev-btn {
+    margin-top: 20px;
+    width: 100px;
+}
+
+.submit-btn {
+    width: 100%;
+    margin-top: 20px;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.form-section {
+    display: none;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.form-section.active {
+    display: block;
+}
+
+/* Form Responsiveness */
+
+@media (min-width: 769px) and (max-width:1007px) {
+    .form-container {
+        padding: 30px;
+    }
+
+    .form-header {
+        margin-top: 1rem;
+    }
+
+    .form-header h1 {
+        font-size: 2.1rem;
+        font-weight: 600;
+        line-height: 2.60rem;
+        padding-bottom: 1.12rem;
+    }
+
+    .form-header h1 span {
+        font-size: 2.2rem;
+        font-weight: 700;
+    }
+
+    .form-header p {
+        padding-top: 0.5rem;
+        font-size: 1.2rem;
+        font-weight: 600;
+        line-height: 1.79rem;
+    }
+
+    .form-header p span {
+        font-size: 1.3rem;
+        font-weight: 800;
+    }
+
+    .form-title {
+        font-size: 1.8rem;
+    }
+
+    input,
+    select,
+    textarea {
+        font-size: 0.9rem;
+        padding: 8px;
+    }
+
+    button {
+        font-size: 0.9rem;
+        padding: 1rem;
+        border-radius: 7px;
+        cursor: pointer;
+    }
+
+}
+
+@media (max-width: 768px) {
+    .form-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+    }
+    
+    .form-header {
+        margin-top: 1rem;
+    }
+    
+    .form-header h1 {
+        font-size: 1.6rem;
+        font-weight: 900;
+        line-height: 1.85rem;
+    }
+    
+    .form-header h1 span {
+        font-size: 1.8rem;
+        font-weight: 700;
+    }
+    
+    .form-header p {
+        padding-top: 1.5rem;
+        font-size: 1.3rem;
+        font-weight: 600;
+        line-height: 1.45rem;
+    }
+    
+    .form-header p span {
+        border: none;
+        font-size: 1.3rem;
+        font-weight: 800;
+    }
+
+    .form-title {
+        font-size: 1.5rem;
+    }
+
+    input,
+    select,
+    textarea {
+        font-size: 0.9rem;
+        padding: 8px;
+    }
+
+    button {
+        font-size: 0.9rem;
+        padding: 1rem;
+        border-radius: 7px;
+        cursor: pointer;
+    }
+
+}
+
+@media (max-width: 650px) {
+    .form-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+
+    .form-header {
+        margin-top: 1rem;
+    }
+
+    .form-header h1 {
+        font-size: 1.6rem;
+        font-weight: 900;
+        line-height: 1.85rem;
+    }
+
+    .form-header h1 span {
+        font-size: 1.8rem;
+        font-weight: 700;
+    }
+
+    .form-header p {
+        padding-top: 1.5rem;
+        font-size: 1.2rem;
+        font-weight: 600;
+        line-height: 1.75rem;
+    }
+    
+    .form-header p span {
+        border: none;
+        font-size: 1.2rem;
+        font-weight: 800;
+    }
+    
+    .form-title {
+        font-size: 1.5rem;
+    }
+
+    input,
+    select,
+    textarea {
+        font-size: 0.9rem;
+        padding: 8px;
+    }
+
+    button {
+        font-size: 0.9rem;
+        padding: 1rem;
+        border-radius: 7px;
+        cursor: pointer;
+    }
+
+}
