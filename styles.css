@@ -21,19 +21,14 @@ body {
     /* Menghindari scroll horizontal */
 }
 
-/* Navbar */
-/* Sudah diatur di module /public/assets/navbar/navbar.css */
-
-/* Section Pertama - Hero */
+/* Hero Section */
 .hero-section {
     background: linear-gradient(to bottom, var(--primary-color), var(--strong-black));
-    /* Gradasi merah ke hitam */
     color: var(--strong-white);
-    /* Warna tulisan putih */
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 150px 0;
+    padding: 100px 0;
     min-height: 80vh;
 }
 
@@ -73,17 +68,17 @@ body {
     border-radius: 50%;
 }
 
-/* Section Kedua - Tentang Kami */
+/* Tentang Kami Section */
 .tentang-section {
     background: var(--strong-black);
     color: var(--strong-white);
-    padding: 1rem 5rem 5rem 5rem;
+    padding: 2rem 3rem;
 }
 
 .tentang-section h2 {
     font-size: 3rem;
     text-align: center;
-    margin-bottom: 50px;
+    margin-bottom: 40px;
     color: var(--strong-white);
 }
 
@@ -91,17 +86,16 @@ body {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    margin-bottom: 50px;
+    margin-bottom: 40px;
 }
 
 .subsection:nth-child(even) {
     flex-direction: row-reverse;
-    /* Membalik subsection untuk sejarah */
 }
-
 
 .subsection .text {
     max-width: 60%;
+    padding: 10px;
 }
 
 .subsection h3 {
@@ -114,9 +108,10 @@ body {
     font-size: 1.2rem;
     line-height: 1.6;
     text-align: justify;
+    padding: 10px;
 }
 
-/* komisariat section  */
+/* Komisariat Section */
 .komisariat-section {
     text-align: center;
     padding: 50px 0;
@@ -163,11 +158,6 @@ body {
     margin-bottom: 30px;
 }
 
-.single-logo {
-    margin-top: 7rem;
-    /* Beri jarak untuk logo yang paling bawah */
-}
-
 .logo-item {
     text-align: center;
     margin: 0 30px;
@@ -186,12 +176,27 @@ body {
     margin-top: 10px;
 }
 
-/* Logo tengah lebih ke bawah */
-.lower-logo {
-    transform: translateY(7rem);
-    /* Posisikan logo tengah lebih rendah */
+.logo-item-solo {
+    text-align: center;
+    margin: 0 30px;
 }
 
+.logo-item-solo img {
+    width: 17rem;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.logo-item-solo p {
+    font-weight: 800;
+    font-size: 1rem;
+    color: var(--strong-white);
+    margin-top: 10px;
+}
+
+.lower-logo {
+    transform: translateY(7rem);
+}
 
 /* Gallery Section */
 .galeri-section {
@@ -210,7 +215,6 @@ body {
 .gallery {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    /* Menampilkan 3 gambar dalam satu baris */
     gap: 20px;
 }
 
@@ -218,7 +222,6 @@ body {
     position: relative;
     width: 100%;
     height: 250px;
-    /* Fixed height to control box size */
     background-size: cover;
     background-position: center;
     border-radius: 15px;
@@ -237,7 +240,6 @@ body {
     left: 0;
     right: 0;
     background: rgba(0, 0, 0, 0.5);
-    /* Background transparan */
     color: var(--strong-white);
     padding: 10px;
     font-size: 1.2rem;
@@ -253,7 +255,6 @@ body {
 /* Kontak Kami Section */
 .kontak-section {
     background: linear-gradient(to bottom, gray, rgb(48, 46, 46));
-    /* Warna gelap */
     color: var(--strong-white);
     padding: 50px 5rem;
     text-align: center;
@@ -273,7 +274,6 @@ body {
     align-items: flex-start;
 }
 
-/* Kontak Form Styling */
 .kontak-form {
     flex: 1;
     background-color: #3E4347;
@@ -337,7 +337,6 @@ body {
     background-color: #a71d2a;
 }
 
-/* Map Styling */
 .kontak-info {
     flex: 0.9;
 }
@@ -355,21 +354,4 @@ body {
     border: 0;
     border-radius: 10px;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-}
-
-
-@media (max-width: 768px) {
-    .kontak-container {
-        flex-direction: column;
-    }
-
-    .map-placeholder,
-    .kontak-form {
-        width: 100%;
-    }
-
-    .gallery {
-        grid-template-columns: 1fr;
-        /* Pada perangkat kecil, gambar tampil satu kolom */
-    }
 }
