@@ -14,8 +14,7 @@
     font-family: 'Plus Jakarta Sans', sans-serif;
 }
 
-html,
-body {
+html, body {
     height: 100%;
 }
 
@@ -27,9 +26,6 @@ body {
     flex-direction: column;
     line-height: 1.6;
 }
-
-/* Navbar */
-/* Sudah diatur di /public/assets/navbar/navbar.css */
 
 /* Form Styles */
 .form-container {
@@ -48,8 +44,7 @@ body {
     text-align: center;
     font-weight: 700;
     line-height: 2.6rem;
-    padding-top: 2.9rem;
-    padding-bottom: 1.12rem;
+    padding: 2.9rem 0 1.12rem;
 }
 
 .form-header h1 span {
@@ -86,9 +81,7 @@ label {
     font-weight: bold;
 }
 
-input,
-select,
-textarea {
+input, select, textarea {
     width: 100%;
     padding: 10px;
     border: 1px solid #ccc;
@@ -112,6 +105,19 @@ button {
     transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
+button:disabled {
+    background-color: #ccc; /* Change to your preferred disabled background color */
+    color: var(--secondary-color); /* Change to your preferred disabled text color */
+    cursor: not-allowed; /* Change cursor to indicate the button is disabled */
+    opacity: 0.6; /* Optional: adjust opacity for a disabled effect */
+}
+
+button:disabled:hover {
+    background-color: #ccc; /* Keep the same color on hover */
+    transform: none; /* Disable the hover transform effect */
+}
+
+
 button:hover {
     background-color: #a71b25;
     transform: scale(1.05);
@@ -129,13 +135,8 @@ button:hover {
 }
 
 @keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-
-    to {
-        opacity: 1;
-    }
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
 
 .form-section {
@@ -148,58 +149,32 @@ button:hover {
 }
 
 /* Form Responsiveness */
-
-@media (min-width: 769px) and (max-width:1007px) {
+@media (min-width: 769px) and (max-width: 1007px) {
     .form-container {
         padding: 30px;
-    }
-
-    .form-header {
-        margin-top: 1rem;
     }
 
     .form-header h1 {
         font-size: 2.1rem;
         font-weight: 600;
-        line-height: 2.60rem;
+        line-height: 2.6rem;
         padding-bottom: 1.12rem;
-    }
-
-    .form-header h1 span {
-        font-size: 2.2rem;
-        font-weight: 700;
     }
 
     .form-header p {
         padding-top: 0.5rem;
         font-size: 1.2rem;
-        font-weight: 600;
         line-height: 1.79rem;
     }
 
-    .form-header p span {
-        font-size: 1.3rem;
-        font-weight: 800;
-    }
-
-    .form-title {
-        font-size: 1.8rem;
-    }
-
-    input,
-    select,
-    textarea {
+    input, select, textarea {
         font-size: 0.9rem;
         padding: 8px;
     }
 
     button {
         font-size: 0.9rem;
-        padding: 1rem;
-        border-radius: 7px;
-        cursor: pointer;
     }
-
 }
 
 @media (max-width: 768px) {
@@ -209,109 +184,45 @@ button:hover {
         align-items: center;
         padding: 20px;
     }
-    
-    .form-header {
-        margin-top: 1rem;
-    }
-    
+
     .form-header h1 {
         font-size: 1.6rem;
-        font-weight: 900;
-        line-height: 1.85rem;
     }
-    
-    .form-header h1 span {
-        font-size: 1.8rem;
-        font-weight: 700;
-    }
-    
+
     .form-header p {
         padding-top: 1.5rem;
         font-size: 1.3rem;
-        font-weight: 600;
-        line-height: 1.45rem;
-    }
-    
-    .form-header p span {
-        border: none;
-        font-size: 1.3rem;
-        font-weight: 800;
     }
 
-    .form-title {
-        font-size: 1.5rem;
-    }
-
-    input,
-    select,
-    textarea {
+    input, select, textarea {
         font-size: 0.9rem;
-        padding: 8px;
     }
 
     button {
         font-size: 0.9rem;
-        padding: 1rem;
-        border-radius: 7px;
-        cursor: pointer;
     }
-
 }
 
 @media (max-width: 650px) {
     .form-container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
         padding: 20px;
-        margin-left: 1rem;
-        margin-right: 1rem;
-    }
-
-    .form-header {
-        margin-top: 1rem;
+        margin: 0 1rem;
     }
 
     .form-header h1 {
         font-size: 1.6rem;
-        font-weight: 900;
-        line-height: 1.85rem;
-    }
-
-    .form-header h1 span {
-        font-size: 1.8rem;
-        font-weight: 700;
     }
 
     .form-header p {
         padding-top: 1.5rem;
         font-size: 1.2rem;
-        font-weight: 600;
-        line-height: 1.75rem;
-    }
-    
-    .form-header p span {
-        border: none;
-        font-size: 1.2rem;
-        font-weight: 800;
-    }
-    
-    .form-title {
-        font-size: 1.5rem;
     }
 
-    input,
-    select,
-    textarea {
+    input, select, textarea {
         font-size: 0.9rem;
-        padding: 8px;
     }
 
     button {
         font-size: 0.9rem;
-        padding: 1rem;
-        border-radius: 7px;
-        cursor: pointer;
     }
-
 }

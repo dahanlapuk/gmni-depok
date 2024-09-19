@@ -17,7 +17,7 @@
 </head>
 
 <body>
-    <!-- Navbar Done -->
+    <!-- Navbar -->
     <header class="navbar">
         <div class="navbar-left">
             <img src="../images/cabang.png" alt="GMNI Depok Logo" class="gmni-logo">
@@ -38,10 +38,9 @@
         <nav class="navbar-right" id="navbarLinks">
             <a href="../index.html">Home</a>
             <a href="../article/article.html">Artikel</a>
-            <a href="#">Daftar</a> <!-- Tambahan menu "Daftar" -->
+            <a href="#">Daftar</a>
         </nav>
     </header>
-
 
     <!-- Form Title and Subtitle -->
     <section class="form-header">
@@ -63,16 +62,16 @@
             <h2 class="form-title">Step 2: Data Pribadi</h2>
             <form id="form-step-2">
                 <label for="name">Nama
-                    <input type="text" id="name" required>
+                    <input type="text" id="name" class="required-field" required>
                 </label>
                 <label for="email">Email
-                    <input type="email" id="email" required>
+                    <input type="email" id="email" class="required-field" required>
                 </label>
                 <label for="telephone">No Telepon (Whatsapp)
-                    <input type="number" id="telephone" required>
+                    <input type="number" id="telephone" class="required-field" required>
                 </label>
                 <button type="button" class="prev-btn" data-prev="section-1">Previous</button>
-                <button type="button" class="next-btn" data-next="section-3">Next</button>
+                <button type="button" class="next-btn" data-next="section-3" disabled>Next</button>
             </form>
         </div>
 
@@ -81,7 +80,7 @@
             <h2 class="form-title">Step 3: Asal Universitas dan Fakultas</h2>
             <form id="form-step-3">
                 <label for="university">Asal Universitas
-                    <select id="university" required>
+                    <select id="university" class="required-field" required>
                         <option value="">Pilih Universitas</option>
                         <option value="Universitas Indonesia">Universitas Indonesia</option>
                         <option value="Jakarta Global University">Jakarta Global University</option>
@@ -91,26 +90,25 @@
                 </label>
                 <label for="other-university" id="other-university-label" class="hidden">
                     Masukkan Universitas
-                    <input type="text" id="other-university">
+                    <input type="text" id="other-university" disabled>
                 </label>
 
                 <label for="faculty">Asal Fakultas
-                    <select id="faculty" required>
+                    <select id="faculty" class="required-field" required>
                         <option value="">Pilih Fakultas</option>
                         <option value="Fakultas Ilmu Budaya">Fakultas Ilmu Budaya</option>
                         <option value="Fakultas Hukum">Fakultas Hukum</option>
                         <option value="Fakultas Ilmu Sosial dan Politik">Fakultas Ilmu Sosial dan Politik</option>
-                        <option value="Fakultas Ilmu Administrasi">Fakultas Ilmu Administrasi</option>
                         <option value="other">Other</option>
                     </select>
                 </label>
                 <label for="other-faculty" id="other-faculty-label" class="hidden">
                     Masukkan Fakultas
-                    <input type="text" id="other-faculty">
+                    <input type="text" id="other-faculty" disabled>
                 </label>
 
                 <button type="button" class="prev-btn" data-prev="section-2">Previous</button>
-                <button type="button" class="next-btn" data-next="section-4">Next</button>
+                <button type="button" class="next-btn" data-next="section-4" disabled>Next</button>
             </form>
         </div>
 
@@ -119,10 +117,10 @@
             <h2 class="form-title">Step 4: Alasan Masuk GMNI</h2>
             <form id="form-step-4">
                 <label for="reason">Alasan Masuk GMNI
-                    <textarea id="reason" required></textarea>
+                    <textarea id="reason" class="required-field" required></textarea>
                 </label>
                 <button type="button" class="prev-btn" data-prev="section-3">Previous</button>
-                <button type="button" class="next-btn" data-next="section-5">Next</button>
+                <button type="button" class="next-btn" data-next="section-5" disabled>Next</button>
             </form>
         </div>
 
@@ -131,7 +129,7 @@
             <h2 class="form-title">Step 5: Syarat dan Ketentuan</h2>
             <p>Dengan melanjutkan, Anda menyetujui <a href="terms.html" target="_blank">syarat dan ketentuan</a> GMNI.</p>
             <button type="button" class="prev-btn" data-prev="section-4">Previous</button>
-            <button type="button" class="next-btn" data-next="section-recap">Next</button>
+            <button type="button" class="next-btn" data-next="section-recap" disabled>Next</button>
         </div>
 
         <!-- Section 6: Recap and Submit -->
@@ -167,10 +165,9 @@
         </div>
     </footer>
 
-    <script src="form.js"></script>
+    <script src="form2.js"></script>
     <script src="../assets/navbar/navbar.js"></script>
     <script>
-        // Feather Icons
         feather.replace();
     </script>
 </body>

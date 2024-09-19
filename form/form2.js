@@ -7,13 +7,13 @@ document.addEventListener('DOMContentLoaded', function () {
     const otherFacultyLabel = document.getElementById('other-faculty-label');
     const recapContent = document.getElementById('recap-content');
 
-     // Add validation for required fields and enable next buttons
-     document.querySelectorAll('.form-section').forEach(section => {
+    // Add validation for required fields and enable next buttons
+    document.querySelectorAll('.form-section').forEach(section => {
         section.querySelectorAll('.required-field').forEach(input => {
             input.addEventListener('input', () => {
                 const form = input.closest('form');
                 const allFilled = Array.from(form.querySelectorAll('.required-field')).every(field => field.value.trim() !== '');
-                form.querySelector('.next-btn').disabled = !allFilled;
+                form.querySelector('.next-btn').disabled = !allFilled || !validateInputs();
             });
         });
     });
@@ -30,7 +30,6 @@ document.addEventListener('DOMContentLoaded', function () {
             otherLabel.classList.add('hidden');
         }
     });
-
     document.getElementById('faculty').addEventListener('change', function () {
         const otherInput = document.getElementById('other-faculty');
         const otherLabel = document.getElementById('other-faculty-label');
@@ -42,6 +41,7 @@ document.addEventListener('DOMContentLoaded', function () {
             otherLabel.classList.add('hidden');
         }
     });
+
     // Handle section transitions
     nextButtons.forEach(button => {
         button.addEventListener('click', () => {
@@ -49,12 +49,11 @@ document.addEventListener('DOMContentLoaded', function () {
             document.querySelector('.form-section.active').classList.remove('active');
             nextSection.classList.add('active');
 
-            // If we're on the recap section, populate the recap
             if (button.dataset.next === 'section-recap') {
                 populateRecap();
             }
 
-            toggleNextButtonState(); // Update button state after moving sections
+            toggleNextButtonState();
         });
     });
 
@@ -64,9 +63,10 @@ document.addEventListener('DOMContentLoaded', function () {
             document.querySelector('.form-section.active').classList.remove('active');
             prevSection.classList.add('active');
 
-            toggleNextButtonState(); // Update button state after moving sections
+            toggleNextButtonState();
         });
     });
+
 
     // Handle "Other" option for university
     universityDropdown.addEventListener('change', function () {
@@ -100,6 +100,26 @@ document.addEventListener('DOMContentLoaded', function () {
     function toggleNextButtonState() {
         nextButtons.forEach(button => {
             const isActiveSection = document.querySelector('.form-section.active');
+            const isFirstSection = isActiveSection.id === 'section-1';
+
+            button.disabled = !validateInputs() || (isFirstSection);
+        });
+    }
+
+    // Validate inputs
+    function validateInputs() {
+        const email = document.getElementById('email').value.trim();
+        const telephone = document.getElementById('telephone').value.trim();
+
+        const emailIsValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+        const telephoneIsValid = telephone.length >= 12;
+
+        return emailIsValid && telephoneIsValid;
+    }
+    // Enable/disable next button based on input validation
+    function toggleNextButtonState() {
+        nextButtons.forEach(button => {
+            const isActiveSection = document.querySelector('.form-section.active');
             const isFirstSection = isActiveSection.id === 'section-1'; // Check if it's the first section
 
             const name = document.getElementById('name')?.value.trim() || '';
@@ -112,7 +132,6 @@ document.addEventListener('DOMContentLoaded', function () {
             button.disabled = !(isFirstSection || (name && email && telephone && university && faculty));
         });
     }
-
     // Populate the recap section with form data
     function populateRecap() {
         const name = document.getElementById('name').value;
