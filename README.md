@@ -21,7 +21,7 @@
     <h2>Cara Menjalankan Proyek</h2>
     <ol>
         <li><strong>Clone Repository</strong>:
-            <pre><code>git clone https://github.com/username/gmni-depok.git</code></pre>
+            <pre><code>git clone https://github.com/dahanlapuk/gmni-depok.git</code></pre>
         </li>
         <li><strong>Install Dependencies</strong>: Arahkan ke direktori proyek dan install dependensi yang diperlukan (jika ada):
             <pre><code>cd gmni-depok
